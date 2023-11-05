@@ -32,7 +32,7 @@ CREATE TABLE TELEFONE
 
 CREATE TABLE MODELO
 (
-	codModelo INT(6) NOT NULL,
+	codModelo INT NOT NULL,
     modelo VARCHAR(50) NOT NULL,
     
     CONSTRAINT modelo_PK PRIMARY KEY (codModelo)
@@ -40,7 +40,7 @@ CREATE TABLE MODELO
 
 CREATE TABLE CATEGORIA 
 (
-	codCategoria INT(2) NOT NULL,
+	codCategoria INT NOT NULL,
     categoria VARCHAR(50) NOT NULL,
     
     CONSTRAINT categoria_PK PRIMARY KEY (codCategoria)
@@ -53,8 +53,8 @@ CREATE TABLE VEICULO
     corPredominante VARCHAR(20) NOT NULL,
     AnoFabricacao INT NOT NULL,
     cpfProprietario BIGINT NOT NULL,
-    codModelo INT(6) NOT NULL,
-    codCategoria INT(2) NOT NULL,
+    codModelo INT NOT NULL,
+    codCategoria INT NOT NULL,
     
     CONSTRAINT veiculo_PK PRIMARY KEY (placa),
     CONSTRAINT veiculo_proprietario_FK FOREIGN KEY (cpfProprietario) REFERENCES PROPRIETARIO (cpf),
@@ -74,7 +74,7 @@ CREATE TABLE TIPOINFRACAO
 
 CREATE TABLE AGENTE 
 (
-	matriculaFuncional INT(4) NOT NULL,
+	matriculaFuncional INT NOT NULL,
     nome VARCHAR(100) NOT NULL,
     dataContratacao DATE NOT NULL,
     tempoServico INT NOT NULL,
@@ -84,7 +84,7 @@ CREATE TABLE AGENTE
 
 CREATE TABLE LUGAR
 (
-	codLugar INT(3) NOT NULL,
+	codLugar INT NOT NULL,
     latitude DECIMAL(10,8) NOT NULL,
     longitude DECIMAL (10,8) NOT NULL,
     velocidadePermitida INT NOT NULL,
@@ -99,9 +99,9 @@ CREATE TABLE INFRACAO
     placaVeiculo VARCHAR(7) NOT NULL,
     dataInfracao DATE NOT NULL,
     tipoInfracao VARCHAR(6) NOT NULL,
-    codLugar INT(3) NOT NULL,
+    codLugar INT NOT NULL,
     velocidade INT DEFAULT 0,
-    matAgente INT(4) NOT NULL,
+    matAgente INT NOT NULL,
     
     CONSTRAINT infracao_pk PRIMARY KEY (idInfracao),
     CONSTRAINT infracao_placa_fk FOREIGN KEY (placaVeiculo) REFERENCES VEICULO (placa), 
