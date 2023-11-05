@@ -2,16 +2,6 @@
 --
 --                    SCRIPT FISICO
 --
--- Data Criacao ...........: 13/08/2023
--- Autor(es) ..............: Ana Luiza Rodrigues da Silva
--- Banco de Dados .........: MySQL 8.0
--- Base de Dados (nome) ...: aula4exer6; 
---
--- PROJETO => 01 Base de Dados
---         => 09 Tabelas
---      
--- Ultimas Alteracoes
---   13/08/2023 => Criando tabelas
 -- ---------------------------------------------------------
 
 CREATE DATABASE detran;

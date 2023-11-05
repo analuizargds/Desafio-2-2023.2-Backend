@@ -2,16 +2,6 @@
 --
 --                    SCRIPT POPULA
 --
--- Data Criacao ...........: 13/08/2023
--- Autor(es) ..............: Ana Luiza Rodrigues da Silva
--- Banco de Dados .........: MySQL 8.0
--- Base de Dados (nome) ...: aula4exer6; 
---
--- PROJETO => 01 Base de Dados
---         => 09 Tabelas
---      
--- Ultimas Alteracoes
---   13/08/2023 => Populando tabelas
 -- ---------------------------------------------------------
 
 USE detran;
@@ -76,8 +66,8 @@ INSERT INTO LUGAR (codLugar, latitude, longitude, velocidadePermitida) VALUES
     
 INSERT INTO INFRACAO (placaVeiculo, dataInfracao, tipoInfracao, codLugar, velocidade, matAgente) VALUES
 	('IQQ2954', '2016-09-28', '605-01', 001, 40, 2551),
-    ('IQQ2954', '2016-11-28', '605-01', 060, 0, 2551),
-    ('IQQ2954', '2017-01-01', '605-01', 066, 120, 2551),
+    ('IQQ2954', '2016-11-28', '605-01', 060, 0, 2349),
+    ('IQQ2954', '2017-01-01', '605-01', 066, 120, 2450),
     ('NCI9817', '2020-09-29', '601-75', 060, 0, 2349),
     ('HWL6275', '2023-05-29', '745-50', 070, 100, 2147),
     ('AUC3551', '2022-09-01', '568-10', 050, 40, 2248),
